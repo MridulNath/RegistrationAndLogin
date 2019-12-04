@@ -46,11 +46,11 @@ public class RegistrationFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        nameET = view.findViewById(R.id.etEmail);
-        emailET = view.findViewById(R.id.etName);
-        phoneET = view.findViewById(R.id.etPhone);
-        passET = view.findViewById(R.id.etPassword);
-        nextbtn = view.findViewById(R.id.button);
+        nameET = view.findViewById(R.id.emailET);
+        emailET = view.findViewById(R.id.nameET);
+        phoneET = view.findViewById(R.id.phoneET);
+        passET = view.findViewById(R.id.passwordET);
+        nextbtn = view.findViewById(R.id.submitBTN);
 
 
 

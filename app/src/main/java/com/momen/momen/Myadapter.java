@@ -35,7 +35,7 @@ public class Myadapter extends RecyclerView.Adapter<Myadapter.MyviewHolder> {
     public MyviewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
 
         LayoutInflater layoutInflater=LayoutInflater.from(context);
-      View view =  layoutInflater.inflate(R.layout.simpallayout,viewGroup,false);
+      View view =  layoutInflater.inflate(R.layout.simpleLayout,viewGroup,false);
 
 
         return new MyviewHolder(view);

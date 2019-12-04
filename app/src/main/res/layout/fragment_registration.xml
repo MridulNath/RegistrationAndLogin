@@ -1,45 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
 
-    android:background="#FCA319"
+    android:background="#8600BCD4"
     android:orientation="vertical"
-    tools:context=".RegistrationFragment">
+    tools:context=".RegistrationFragment"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
 
 
     <!-- TODO: Update blank fragment layout -->
 
 
-    <LinearLayout
-
-        android:id="@+id/layout"
+    <TextView
+        android:id="@+id/nameTV"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Registration"
+        android:textAlignment="center"
+        android:textColor="#E22196F3"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        android:orientation="vertical"
-        android:paddingBottom="35dp">
+    <EditText
 
-
-        <TextView
-            android:id="@+id/tV_id"
+            android:id="@+id/nameET"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2"
-            android:text="Registration"
-            android:textAlignment="center"
-            android:textColor="#0E0D0D"
-            android:textSize="40sp"
-            android:textStyle="bold" />
-
-
-        <EditText
-
-            android:id="@+id/etName"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_below="@+id/tvEmail"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_person_black_24dp"
+            android:paddingLeft="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nameTV"
+            android:layout_margin="10dp"
+            android:textColorHint="#ffff"
+            android:fontFamily="sans-serif-condensed-medium"
             android:layout_weight="1"
             android:drawablePadding="30dp"
             android:hint="Input your Name"
@@ -47,72 +53,104 @@
 
 
         <EditText
-            android:id="@+id/etEmail"
+            android:id="@+id/emailET"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_below="@+id/tvUsername"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_email_black_24dp"
+            android:paddingLeft="10dp"
+            android:textColorHint="#ffff"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nameET"
             android:drawablePadding="30dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:layout_margin="10dp"
             android:hint="Input your email"
             android:inputType="textEmailAddress" />
 
 
         <EditText
-            android:id="@+id/etPhone"
+            android:id="@+id/phoneET"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_below="@+id/tvPassword"
+            android:drawableLeft="@drawable/ic_phone_black_24dp"
+            android:paddingLeft="10dp"
+            android:textColorHint="#ffff"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/emailET"
             android:layout_weight="1"
-            android:drawablePadding="30dp"
-            android:hint="Input Phome number"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:layout_margin="10dp"
+            android:drawablePadding="20dp"
+            android:hint="Input Phone number"
             android:inputType="number" />
 
 
         <EditText
-            android:id="@+id/etPassword"
+            android:id="@+id/passwordET"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_below="@+id/tvRePassword"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:drawableLeft="@drawable/ic_fingerprint_black_24dp"
+            android:drawablePadding="30dp"
+            android:textColorHint="#ffff"
+            app:layout_constraintTop_toBottomOf="@id/phoneET"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:layout_margin="10dp"
             android:hint="Input Passwoard"
             android:inputType="textPassword" />
 
         <TextView
 
 
-            android:id="@+id/tvGender"
+            android:id="@+id/genderTV"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_below="@+id/etPhone"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/phoneET"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:fontFamily="sans-serif-condensed-medium"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/passwordET"
+            android:layout_margin="10dp"
 
             android:layout_weight="1"
             android:gravity="center"
 
             android:text="Seclect your Gender"
-            android:textColor="#030303"
+            android:textColor="#E22196F3"
             android:textSize="24sp"
             android:textStyle="bold" />
 
 
         <RadioGroup
+            android:id="@+id/genderRG"
             android:layout_width="match_parent"
-            android:layout_height="22dp"
-            android:layout_weight="2">
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:layout_margin="10dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/genderTV">
 
             <RadioButton
 
-                android:id="@+id/radioButton"
+                android:id="@+id/femaleRB"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-
+                android:textColor="#E22196F3"
                 android:text="Female" />
 
 
             <RadioButton
 
-                android:id="@+id/radioButton2"
+                android:id="@+id/maleRB"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+                android:textColor="#E22196F3"
                 android:text="Male" />
 
 
@@ -120,27 +158,34 @@
 
 
         <CheckBox
-            android:id="@+id/checkBox"
+            android:id="@+id/agreeCB"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="#E22196F3"
             android:text="I agree to the terms of service"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/genderRG"
+            android:fontFamily="sans-serif-condensed-medium"
             android:textSize="20sp"
+            android:layout_margin="10dp"
             android:textStyle="bold" />
 
 
         <Button
 
-            android:id="@+id/button"
-            android:layout_width="174dp"
-            android:layout_height="83dp"
+            android:id="@+id/submitBTN"
+            android:layout_width="180dp"
+            android:layout_height="100dp"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:background="@drawable/nextbtn"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/agreeCB"
+            android:layout_marginTop="20dp"
             android:clickable="true"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-    </LinearLayout>
-
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
