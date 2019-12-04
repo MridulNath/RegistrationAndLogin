@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+
+    android:layout_height="match_parent"
+    tools:context="com.momen.momen.HomeActivity">
+
+
+
+    <include
+        android:id="@+id/tooolbar"
+        layout="@layout/appbar"/>
+
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:background="#FFFCA319"
+
+        android:layout_below="@+id/tooolbar"
+        android:id="@+id/recyclerviewid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:padding="10dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

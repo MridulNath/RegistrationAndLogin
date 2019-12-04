@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#FCA319"
+    android:orientation="vertical"
+    tools:context=".RegistrationFragment">
+
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <LinearLayout
+
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical"
+        android:paddingBottom="35dp">
+
+
+        <TextView
+            android:id="@+id/tV_id"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:text="Registration"
+            android:textAlignment="center"
+            android:textColor="#0E0D0D"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+
+        <EditText
+
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/tvEmail"
+            android:layout_weight="1"
+            android:drawablePadding="30dp"
+            android:hint="Input your Name"
+            android:inputType="text" />
+
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/tvUsername"
+            android:layout_weight="1"
+            android:drawablePadding="30dp"
+            android:hint="Input your email"
+            android:inputType="textEmailAddress" />
+
+
+        <EditText
+            android:id="@+id/etPhone"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/tvPassword"
+            android:layout_weight="1"
+            android:drawablePadding="30dp"
+            android:hint="Input Phome number"
+            android:inputType="number" />
+
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/tvRePassword"
+            android:layout_weight="1"
+            android:hint="Input Passwoard"
+            android:inputType="textPassword" />
+
+        <TextView
+
+
+            android:id="@+id/tvGender"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/etPhone"
+
+            android:layout_weight="1"
+            android:gravity="center"
+
+            android:text="Seclect your Gender"
+            android:textColor="#030303"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:layout_weight="2">
+
+            <RadioButton
+
+                android:id="@+id/radioButton"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+
+                android:text="Female" />
+
+
+            <RadioButton
+
+                android:id="@+id/radioButton2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Male" />
+
+
+        </RadioGroup>
+
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="I agree to the terms of service"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+        <Button
+
+            android:id="@+id/button"
+            android:layout_width="174dp"
+            android:layout_height="83dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/nextbtn"
+            android:clickable="true"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
